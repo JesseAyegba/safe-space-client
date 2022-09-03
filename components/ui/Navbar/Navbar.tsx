@@ -13,7 +13,7 @@ const Navbar: FC = () => {
             <a className="text-white block text-sm mx-2">Login</a>
           </Link>
           <Link href="#">
-            <a className="bg-brand-purple rounded-xl block text-white text-sm mx-2 px-4 py-3 font-bold">
+            <a className="bg-brand-purple rounded-sm block text-white text-sm mx-2 px-4 py-3 font-bold">
               Get started
             </a>
           </Link>

@@ -3,12 +3,13 @@ module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
+    "./layouts/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       colors: {
         "dark-bg": "#0D1117",
-        "brand-purple": "#790675",
+        "brand-purple": "#990257",
       },
     },
   },
