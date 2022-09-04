@@ -6,15 +6,17 @@ import Section3 from "./Section3/Section3";
 const LandingPageWrapper: React.FC = () => {
   return (
     <div>
-      <section className="mb-10">
-        <Section1 />
-      </section>
-      <section className="mb-10">
-        <Section2 />
-      </section>
-      <section className="">
-        <Section3 />
-      </section>
+      <div className="px-4 md:px-8">
+        <section className="mb-10">
+          <Section1 />
+        </section>
+        <section className="mb-10">
+          <Section2 />
+        </section>
+        <section className="">
+          <Section3 />
+        </section>
+      </div>
     </div>
   );
 };

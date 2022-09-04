@@ -4,11 +4,11 @@ import Link from "next/link";
 const LandingPageNavbar: React.FC = () => {
   return (
     <nav className="bg-dark-bg">
-      <div className="h-full grid grid-cols-[0.3fr,1fr,0.4fr]  p-10">
+      <div className="h-full grid  grid-cols-2  px-4 py-10  lg:grid-cols-[0.3fr,1fr,0.4fr] md:px-8">
         <div>
           <h2 className="font-bold text-brand-purple text-2xl">SafeSpace</h2>
         </div>
-        <div className="grid place-items-center">
+        <div className="place-items-center hidden lg:grid">
           <ul className="flex items-center gap-8">
             <li>
               <Link href="#">
@@ -27,10 +27,10 @@ const LandingPageNavbar: React.FC = () => {
           </ul>
         </div>
         <div className="flex items-center justify-end gap-8">
-          <button className="text-brand-purple text-sm font-semibold">
+          <button className="hidden text-brand-purple text-sm font-semibold lg:inline-block">
             Sign in
           </button>
-          <button className="bg-brand-purple text-sm font-semibold text-white px-6 py-2 rounded-lg">
+          <button className="hidden bg-brand-purple text-sm font-semibold text-white px-6 py-2 rounded-lg lg:inline-block">
             Sign Up
           </button>
         </div>
