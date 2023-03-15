@@ -1,7 +1,7 @@
-import { FC } from "react";
+import React from "react";
 import Link from "next/link";
 
-const Navbar: FC = () => {
+const Navbar: React.FC = () => {
   return (
     <div className="bg-dark-bg px-4 flex justify-center items-center">
       <div className="flex items-center justify-between h-20 w-full max-w-8xl">

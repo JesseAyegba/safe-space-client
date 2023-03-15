@@ -1,10 +1,10 @@
 import { TextInput } from "@mantine/core";
 import React, { useState } from "react";
-import { useForm } from "react-hook-form";
-import { MultiStepLoginFormInputs } from "../../typings/typings";
-import { yupResolver } from "@hookform/resolvers/yup";
 import Step1 from "./Step1/Step1";
 import Step2 from "./Step2/Step2";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { MultiStepLoginFormInputs } from "../../typings/typings";
+import { yupResolver } from "@hookform/resolvers/yup";
 import { MultiStepLoginFormSchema } from "./MultiStepLoginForm.schema";
 
 const MultiStepLoginForm: React.FC = () => {
@@ -52,8 +52,20 @@ const MultiStepLoginForm: React.FC = () => {
         );
     }
   };
+
+  const onSubmit: SubmitHandler<MultiStepLoginFormInputs> = async (data) => {
+    try {
+      const email = data.email;
+      const password = data.password;
+    } catch (error: any) {
+    } finally {
+    }
+  };
   return (
-    <form className="rounded-2xl border border-slate-700 py-12 px-10 w-full max-w-md">
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="rounded-2xl border border-slate-700 py-12 px-10 w-full max-w-md"
+    >
       <div className="font-bold text-brand-purple text-2xl mb-12">
         SafeSpace
       </div>

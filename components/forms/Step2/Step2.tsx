@@ -1,10 +1,10 @@
-import { TextInput } from "@mantine/core";
 import Link from "next/link";
 import React, { useState } from "react";
+import EmailBlock from "../../ui/EmailBlock/EmailBlock";
 import { FieldErrorsImpl, UseFormRegister } from "react-hook-form";
 import { MultiStepLoginFormInputs } from "../../../typings/typings";
 import { inputStyles } from "../../../utils/other/inputStyles";
-import EmailBlock from "../../ui/EmailBlock/EmailBlock";
+import { TextInput } from "@mantine/core";
 
 interface Props {
   onPrevious: () => void;
