@@ -1,6 +1,6 @@
 import { TextInput } from "@mantine/core";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import {
   FieldErrorsImpl,
   UseFormRegister,
@@ -8,6 +8,7 @@ import {
 } from "react-hook-form";
 import { MultiStepLoginFormInputs } from "../../../typings/typings";
 import { inputStyles } from "../../../utils/other/inputStyles";
+import ButtonLoader from "../../ui/ButtonLoader/ButtonLoader";
 
 interface Props {
   onNext: () => void;
@@ -17,12 +18,17 @@ interface Props {
 }
 
 const Step1: React.FC<Props> = ({ onNext, register, trigger, errors }) => {
+  const [loading, setLoading] = useState<boolean>(false);
   const handleNext = async () => {
     const isValid = await trigger("email");
     if (!isValid) {
       return;
     }
-    onNext();
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      onNext();
+    }, 4000);
   };
   return (
     <div>
@@ -51,11 +57,14 @@ const Step1: React.FC<Props> = ({ onNext, register, trigger, errors }) => {
       </div>
       <div className="mt-6 mb-8">
         <button
+          disabled={loading}
           onClick={() => handleNext()}
-          className="h-[3.5rem] bg-brand-purple w-full rounded-xl font-bold"
+          className={`h-[3.5rem] bg-brand-purple w-full rounded-xl font-bold ${
+            loading && "opacity-50"
+          }`}
           type="button"
         >
-          <span>Continue</span>
+          {loading ? <ButtonLoader /> : <span>Continue</span>}
         </button>
       </div>
       <div className="text-center">

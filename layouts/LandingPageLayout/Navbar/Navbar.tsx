@@ -11,7 +11,7 @@ const LandingPageNavbar: React.FC = () => {
         </div>
         <div className="">
           <Link href="/signin">
-            <a className=" text-brand-purple text-sm font-semibold rounded-xl border border-brand-purple py-2 px-4 ">
+            <a className="h-[3rem] grid place-items-center text-brand-purple text-sm font-semibold rounded-xl border border-brand-purple py-2 px-8 ">
               Sign in
             </a>
           </Link>
