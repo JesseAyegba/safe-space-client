@@ -1,14 +1,12 @@
 import type { NextPage } from "next";
-import LandingPageWrapper from "../components/ui/LandingPageWrapper/LandingPageWrapper";
+import LandingPageWrapper from "../components/page-wrappers/LandingPageWrapper/LandingPageWrapper";
 import LandingPageLayout from "../layouts/LandingPageLayout";
 
 const Home: NextPage = () => {
   return (
-    <div>
-      <LandingPageLayout>
-        <LandingPageWrapper />
-      </LandingPageLayout>
-    </div>
+    <LandingPageLayout>
+      <LandingPageWrapper />
+    </LandingPageLayout>
   );
 };
 
