@@ -6,9 +6,9 @@ import {
   UseFormRegister,
   UseFormTrigger,
 } from "react-hook-form";
-import { MultiStepLoginFormInputs } from "../../../typings/typings";
-import { inputStyles } from "../../../utils/other/inputStyles";
-import ButtonLoader from "../../ui/ButtonLoader/ButtonLoader";
+import { MultiStepLoginFormInputs } from "../../../../typings/typings";
+import { inputStyles } from "../../../../utils/other/inputStyles";
+import ButtonLoader from "../../../ui/ButtonLoader/ButtonLoader";
 
 interface Props {
   onNext: () => void;

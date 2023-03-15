@@ -22,8 +22,10 @@ const Section2: React.FC = () => {
   return (
     <div className="grid place-items-center">
       <Hero
-        header="Open global accounts"
-        body="Open a US Dollar, Nigerian Naira, Canadian Dollar, United Kingdom Pounds account in less than 5 minutes."
+        header="Secure file storage"
+        body="Looking for a safe spot for your top-secret files?
+        We've got you covered with our secure storage.
+        No more worrying about hackers taking a watch!"
         illustration={<div ref={container} className=""></div>}
         reverse
       />

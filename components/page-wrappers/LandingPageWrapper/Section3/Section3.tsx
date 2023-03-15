@@ -22,8 +22,8 @@ const Section3: React.FC = () => {
   return (
     <div className="grid place-items-center">
       <Hero
-        header="Open global accounts"
-        body="Open a US Dollar, Nigerian Naira, Canadian Dollar, United Kingdom Pounds account in less than 5 minutes."
+        header="Introducing Secure Journals"
+        body="The perfect way to keep your private thoughts and musings safe from prying eyes! With our advanced security features, you can be rest assured that your journal will remain for your eyes only."
         illustration={<div ref={container} className=" "></div>}
       />
     </div>

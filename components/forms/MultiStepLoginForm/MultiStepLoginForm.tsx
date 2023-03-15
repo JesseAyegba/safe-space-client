@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Step1 from "./Step1/Step1";
 import Step2 from "./Step2/Step2";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { MultiStepLoginFormInputs } from "../../typings/typings";
+import { MultiStepLoginFormInputs } from "../../../typings/typings";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { MultiStepLoginFormSchema } from "./MultiStepLoginForm.schema";
 

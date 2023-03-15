@@ -1,5 +1,5 @@
 import React from "react";
-import MultiStepLoginForm from "../../forms/MultiStepLoginForm";
+import MultiStepLoginForm from "../../forms/MultiStepLoginForm/MultiStepLoginForm";
 
 const SigninPageWrapper: React.FC = () => {
   return (
