@@ -26,6 +26,11 @@ const SignupForm: React.FC = () => {
       const lastName = data.lastName;
       const email = data.email;
       const password = data.password;
+
+      setLoading(true);
+      setTimeout(() => {
+        setLoading(false);
+      }, 4000);
     } catch (error: any) {
     } finally {
     }
