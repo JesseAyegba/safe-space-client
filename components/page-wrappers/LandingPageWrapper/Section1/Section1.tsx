@@ -1,8 +1,9 @@
-import Image from "next/image";
+import { useRouter } from "next/router";
 import React from "react";
 import MaxWidthProvider from "../../../ui/MaxWidthProvider/MaxWidthProvider";
 
 const Section1: React.FC = () => {
+  const router = useRouter();
   return (
     <MaxWidthProvider className="mx-auto pt-40 text-center">
       <h1 className="max-w-5xl mx-auto font-bold text-3xl md:text-5xl lg:text-7xl  text-white mb-10 ">
@@ -14,10 +15,20 @@ const Section1: React.FC = () => {
         you need to store, share and organize your files.
       </p>
       <div className="flex items-center justify-center gap-6">
-        <button className="font-medium px-4 h-[3rem] rounded-xl bg-brand-purple text-white w-full max-w-[10rem] text-md  ">
+        <button
+          onClick={() => {
+            router.push("/signup");
+          }}
+          className="font-medium px-4 h-[3rem] rounded-xl bg-brand-purple text-white w-full max-w-[10rem] text-md  "
+        >
           Get Started
         </button>
-        <button className="font-medium px-4 h-[3rem] rounded-xl border border-brand-purple text-brand-purple w-full max-w-[10rem] text-md ">
+        <button
+          onClick={() => {
+            router.push("/signin");
+          }}
+          className="font-medium px-4 h-[3rem] rounded-xl border border-brand-purple text-brand-purple w-full max-w-[10rem] text-md "
+        >
           Sign in
         </button>
       </div>
