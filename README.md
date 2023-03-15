@@ -4,6 +4,10 @@ This repository represents client-side implementation of Safe space (a cloud sto
 It utilizes technologies like React JS, Next JS, Typescript and is expected to be deployed
 to a worker node of a kubernetes cluster served from AWS.
 
+## Live Deployment
+
+<a href="https://safe-space-client.vercel.app" target="_blank">Live Deployment</a>
+
 ## Getting this project to work🚀🧑‍🚀
 
 ### Using docker👍👌😉
