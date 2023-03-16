@@ -1,4 +1,3 @@
-import { TextInput } from "@mantine/core";
 import React, { useState } from "react";
 import Step1 from "./Step1/Step1";
 import Step2 from "./Step2/Step2";
@@ -6,8 +5,10 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { MultiStepLoginFormInputs } from "../../../typings/typings";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { MultiStepLoginFormSchema } from "./MultiStepLoginForm.schema";
+import { useRouter } from "next/router";
 
 const MultiStepLoginForm: React.FC = () => {
+  const router = useRouter();
   const [step, setStep] = useState<number>(0);
   const {
     register,
@@ -66,7 +67,12 @@ const MultiStepLoginForm: React.FC = () => {
       onSubmit={handleSubmit(onSubmit)}
       className="rounded-2xl border border-slate-700 py-12 px-10 w-full max-w-md"
     >
-      <div className="font-bold text-brand-purple text-2xl mb-12">
+      <div
+        onClick={() => {
+          router.push("/");
+        }}
+        className="cursor-pointer font-bold inline-block text-brand-purple text-2xl mb-12"
+      >
         SafeSpace
       </div>
       {showUI()}

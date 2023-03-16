@@ -1,13 +1,16 @@
+import Link from "next/link";
+import React, { useState } from "react";
+import ButtonLoader from "../../ui/ButtonLoader/ButtonLoader";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { TextInput } from "@mantine/core";
-import React, { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { SignupFormInputs } from "../../../typings/typings";
 import { inputStyles } from "../../../utils/other/inputStyles";
-import ButtonLoader from "../../ui/ButtonLoader/ButtonLoader";
 import { SignupFormSchema } from "./SignupForm.schema";
+import { useRouter } from "next/router";
 
 const SignupForm: React.FC = () => {
+  const router = useRouter();
   const [loading, setLoading] = useState<boolean>(false);
   const [showPassword, setShowPassword] = useState<boolean>(false);
 
@@ -39,7 +42,12 @@ const SignupForm: React.FC = () => {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="max-w-[30rem] mx-auto">
-        <div className="font-bold text-brand-purple text-2xl mb-12">
+        <div
+          onClick={() => {
+            router.push("/");
+          }}
+          className="cursor-pointer font-bold inline-block text-brand-purple text-2xl mb-12"
+        >
           SafeSpace
         </div>
         <h1 className="font-bold text-brand-purple text-3xl mb-10">
@@ -138,7 +146,7 @@ const SignupForm: React.FC = () => {
             }
           />
         </div>
-        <div className="mt-6 mb-8">
+        <div className="mt-6 mb-4">
           <button
             disabled={loading}
             className={`h-[3.5rem] bg-brand-purple w-full rounded-xl font-bold ${
@@ -148,6 +156,13 @@ const SignupForm: React.FC = () => {
           >
             {loading ? <ButtonLoader /> : <span>Sign up</span>}
           </button>
+        </div>
+        <div className="text-center">
+          <Link href="/signin">
+            <a className="text-brand-purple text-sm text-medium">
+              Sign in instead
+            </a>
+          </Link>
         </div>
       </div>
     </form>
